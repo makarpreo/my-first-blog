@@ -1,0 +1,17 @@
+{% extends 'main/index.html' %}
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+{% block title %}
+создать таск
+{% endblock %}
+{% block content %}
+<h1>Создать Таск</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.title }}<br>
+    {{ form.task }}<br>
+  <button type="submit" class="btn btn-success">Добавить</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}

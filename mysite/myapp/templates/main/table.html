@@ -1,0 +1,62 @@
+{% extends 'main/index.html' %}
+
+{% block content %}
+
+<table style="width: 200px;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;">
+  <tr>
+    <td>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.table }}<br>
+    {{ form.time }}<br>
+    <button type="submit" class="btn btn-success">Добавить</button>
+    <span>{{ error }}</span></td>
+    <td><button>15</button></td>
+  </tr>
+  <tr>
+    <td><form method="post">
+    {% csrf_token %}
+    {{ form.table1 }}<br>
+    {{ form.time }}<br>
+    <button type="submit" class="btn btn-success">Добавить</button>
+    <span>{{ error }}</span></td>
+    <td><button>16</button></td>
+  </tr>
+  <tr>
+    <td><button>10</button></td>
+    <td><button>17</button></td>
+  </tr>
+  <tr>
+    <td><form method="post">
+    {% csrf_token %}
+    {{ form.table }}<br>
+    {{ form.time }}<br>
+    <button type="submit" class="btn btn-success">Добавить</button>
+    <span>{{ error }}</span>
+</form>
+        <button type="submit">11</button></td>
+    <td><button>18</button></td>
+  </tr>
+ <tr>
+    <td><button>12</button></td>
+    <td><button>19</button></td>
+  </tr>
+   <tr>
+    <td><button>13</button></td>
+    <td><button>20</button></td>
+  </tr>
+   <tr>
+    <td><button>14</button></td>
+    <td><button>21</button></td>
+  </tr>
+</table>
+<form method="post">
+    {% csrf_token %}
+    {{ form.table }}<br>
+    {{ form.time }}<br>
+    <button type="submit" class="btn btn-success">Добавить</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'main/index.html' %}
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+<h1>1</h1>
+<div class="alert alert-warning mt-2">
+<table class="table table-hover">
+    {% for el in tasks %}
+    <tr>
+        <td>
+            <h3>{{ el.title }}</h3>
+            {{ el.text }}
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+    </div>
+<form action="http://127.0.0.1:8000/admin/myapp/post/add/">
+    <button class="btn btn-success">
+        <input type="submit" value="Добавить запись 1 подьемник" class="form-control">
+    </button>
+</form>
+
+<h1>2</h1>
+<div class="alert alert-warning mt-2">
+<table class="table table-hover">
+    {% for el in task %}
+    <tr>
+        <td>
+            <h3>{{ el.title }}</h3>
+            {{ el.text }}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+<form action="http://127.0.0.1:8000/admin/myapp/post1/add/">
+    <button class="btn btn-success">
+        <input type="submit" value="Добавить запись 2 подьемник" class="form-control">
+    </button>
+</form>
+{% endblock %}
